@@ -2,4 +2,4 @@
 ## Проект
 Этот репозиторий является каркасом для будущего веб-приложения.
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://HEGATNB.github.io/HiddenProject_FABD/)
+- [Ссылка на сайт](https://HEGATNB.github.io/HiddenProject_FABD/)
