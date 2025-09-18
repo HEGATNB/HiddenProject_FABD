@@ -3,44 +3,56 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Главная </title>
+ <title>Главная</title>
  <meta name="description" content="Основная информация о сайте">
  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="static/styles.css">
 </head>
-<body>
+<body class="page">
     <!-- Верхняя часть -->
-    <header>
-    <a href="index.html">Лого сайта</a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="index.html">Лого сайта</a>
+            
+            <!-- Основная навигация -->
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Основная часть -->
-    <main>
-        <h1>Добро пожаловать на сайт!</h1>
-        
-        <section id="section">
-            <h2>Наши услуги</h2>
-            <p>Описание услуг</p>
-            <a href="#contacts">Связаться с нами</a>
-        </section>
-        <section id="protfolio">
-             <h2>Портфолио</h2>
-            <p>Список работ</p>
-        </section>
-         <section id="contacts">
-             <h2>Связь с нами</h2>
-            <p>Контактная информация</p>
-        </section>
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Добро пожаловать на сайт!</h1>
+            
+            <section class="section" id="services">
+                <h2 class="section__title">Наши услуги</h2>
+                <p class="section__text">Описание услуг</p>
+                <a class="section__link" href="#contacts">Связаться с нами</a>
+            </section>
+            
+            <section class="section" id="portfolio">
+                 <h2 class="section__title">Портфолио</h2>
+                <p class="section__text">Список работ</p>
+            </section>
+             
+            <section class="section" id="contacts">
+                 <h2 class="section__title">Связь с нами</h2>
+                <p class="section__text">Контактная информация</p>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-     </footer>
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+            <p class="footer__contact">Телефон: +7 (123) 456-78-90</p>
+        </div>
+    </footer>
 </body>
 </html>

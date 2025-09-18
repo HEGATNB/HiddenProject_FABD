@@ -4,72 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <meta name="description" content="Контакты компании" >
+    <meta name="description" content="Контакты компании">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="static/styles.css">
 </head>
-<body>
+<body class="page">
     <!-- Верхняя часть страницы -->
-    <header>
-       <a href="index.html">Логотип</a>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a>
-            <span>→</span>
-            <span>Контакты</span>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav> 
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="index.html">Логотип</a>
+            
+            <!-- Основная навигация -->
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <span class="breadcrumbs__text">Контакты</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
     </header>
     
     <!-- Основная часть страницы -->
-    <main>
-        <h1>Наши контакты</h1>
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Наши контакты</h1>
 
-        <section>
-            <h2>Наши телефоны</h2>
-            <p>Телефоны для связи</p>
-        </section>
+            <section class="section">
+                <h2 class="section__title">Наши телефоны</h2>
+                <p class="section__text">Телефоны для связи</p>
+            </section>
 
-        <section>
-            <h2>Наши соц.сети</h2>
-            <p>Ссылки на наши соц. сети</p>
-        </section>
+            <section class="section">
+                <h2 class="section__title">Наши соц.сети</h2>
+                <p class="section__text">Ссылки на наши соц. сети</p>
+            </section>
 
-        <h1>Форма обратной связи</h1>
-        <form id="ContactForm">
-            <label for="username">Ваше имя:</label>
-            <input type="text" id="username" name="username" required>
+            <section class="section">
+                <h2 class="section__title">Форма обратной связи</h2>
+                <form class="form" id="ContactForm">
+                    <div class="form__group">
+                        <label class="form__label" for="username">Ваше имя:</label>
+                        <input class="form__input" type="text" id="username" name="username" required>
+                    </div>
 
-            <label for="phone">Номер телефона:</label>
-            <input type="text" id="phone" name="phone" required>
+                    <div class="form__group">
+                        <label class="form__label" for="phone">Номер телефона:</label>
+                        <input class="form__input" type="text" id="phone" name="phone" required>
+                    </div>
 
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+                    <div class="form__group">
+                        <label class="form__label" for="email">Email:</label>
+                        <input class="form__input" type="email" id="email" name="email" required>
+                    </div>
 
-            <label for="cource">Ваш курс</label>
-            <select id="cource" name="cource">
-                <option value="no">Не выбрано</option>
-                <option value="1">1 курс</option>
-                <option value="2">2 курс</option>
-                <option value="3">3 курс</option>
-                <option value="4">4 курс</option>
-                <option value="other">Другое</option>
-            </select>
+                    <div class="form__group">
+                        <label class="form__label" for="course">Ваш курс</label>
+                        <select class="form__select" id="course" name="course">
+                            <option value="no">Не выбрано</option>
+                            <option value="1">1 курс</option>
+                            <option value="2">2 курс</option>
+                            <option value="3">3 курс</option>
+                            <option value="4">4 курс</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
 
-            <label for="message">Ваше обращение:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+                    <div class="form__group">
+                        <label class="form__label" for="message">Ваше обращение:</label>
+                        <textarea class="form__textarea" id="message" name="message" rows="6" required></textarea>
+                    </div>
 
-            <button type="submit">Отправить форму</button>
-            <button type="reset">Очистить форму</button>
-        </form>
+                    <div class="form__actions">
+                        <button class="form__button form__button--submit" type="submit">Отправить форму</button>
+                        <button class="form__button form__button--reset" type="reset">Очистить форму</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+            <p class="footer__contact">Телефон: +7 (123) 456-78-90</p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
