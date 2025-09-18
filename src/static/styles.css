@@ -1,61 +1,104 @@
+:root {
+  --color-border: rgb(179, 126, 179);
+  --space-1: 5px;
+  --space-2: 10px;
+}
+
 * {
-    font-family: Tahoma;
-    margin: 15;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 25;
-    text-align:center;
-}
-input, button {
-    border: none;
-    outline: none;
-    font-family: inherit;
-    font-size: inherit;
-}
-label{
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-}
-input {
-    border: 3px solid rgb(179, 126, 179);
-    border-radius: 10px;
-    background-color: while;
-    color: rgb(0, 0, 0);
-    padding: 5px;
-    margin-top: 5px;
-}
-button{
-    border:10px;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 5px;
-    margin:10px;
-    color: black;
-}
-button:hover{
-    background-color: gray;
-}
-#ContactForm{
-    border:3px solid rgb(179, 126, 179);
-    border-radius: 25px;
-    background-color: white;
-    padding: 10px;
-    max-width: 550px;
+  margin: 35px;
+  font-family: Tahoma;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
+  text-align: center;
 }
 
-.error{
-    border: 3px solid red;
-    background-color: white;
-    color: brown;
-    border-radius: 10px;
-    padding: 7px;
-}
-
+/* Блок form */
 .form {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--color-border);
+  border-radius: 25px;
+  background-color: white;
+  padding: var(--space-2);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Элементы формы */
+.form__group {
+  width: 100%;
+  margin-bottom: var(--space-2);
+}
+
+.form__label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: var(--space-1);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  border: 3px solid var(--color-border);
+  border-radius: var(--space-2);
+  background-color: white;
+  color: black;
+  padding: var(--space-1);
+  margin-top: var(--space-1);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.form__textarea {
+  resize: vertical;
+}
+
+.form__actions {
+  display: flex;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+/* Блок button */
+.form__button {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: var(--space-2);
+  padding: var(--space-1);
+  margin: var(--space-1);
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background-color: gray;
+}
+
+.form__button--submit {
+  background-color: var(--color-border);
+  color: white;
+  border-color: var(--color-border);
+}
+
+.form__button--reset {
+  background-color: white;
+  color: black;
+}
+
+/* Модификатор error */
+.form__error {
+  border: 3px solid red;
+  background-color: white;
+  color: brown;
+  border-radius: var(--space-2);
+  padding: 7px;
+  margin-top: var(--space-1);
 }

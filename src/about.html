@@ -6,37 +6,61 @@
  <title>О нас</title>
  <meta name="description" content="Информация о нас:">
  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+ <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
     <!-- Верхняя часть -->
-    <header>
-    <a href="index.html">Лого сайта</a>
-    <nav aria-label="Хлебные крошки">
-        <a href="index.html"></a>
-        <span>=></span>
-        <span>О нас</span>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="index.html">Лого сайта</a>
+            
+            <!-- Основная навигация -->
+            <nav class="nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="about.html">О нас</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        <span class="breadcrumbs__text">О нас</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
     </header>
+    
     <!-- Основная часть -->
-    <main>
-        <h1>Информация о нас</h1>
-        <section>
-            <h2>Наша история</h2>
-            <p>Очень крутая история</p>
-        </section>
-        <section>
-            <h2>Наша команда</h2>
-            <p>Одни профессионалы</p>
-        </section>
+    <main class="main">
+        <div class="container">
+            <h1 class="main__title">Информация о нас</h1>
+            
+            <section class="section">
+                <h2 class="section__title">Наша история</h2>
+                <p class="section__text">Очень крутая история</p>
+            </section>
+            
+            <section class="section">
+                <h2 class="section__title">Наша команда</h2>
+                <p class="section__text">Одни профессионалы</p>
+            </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-     </footer>
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copyright">&copy; 2023 Название вашего сайта. Все права защищены.</p>
+            <p class="footer__contact">Телефон: +7 (123) 456-78-90</p>
+        </div>
+    </footer>
 </body>
 </html>
