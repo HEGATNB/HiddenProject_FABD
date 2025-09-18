@@ -1,8 +1,10 @@
 * {
-    margin: 0;
+    font-family: Tahoma;
+    margin: 15;
     padding: 0;
     box-sizing: border-box;
-    font-size: 20;
+    font-size: 25;
+    text-align:center;
 }
 input, button {
     border: none;
@@ -16,29 +18,29 @@ label{
     margin-top: 10px;
 }
 input {
-    border: 3px solid purple;
+    border: 3px solid rgb(179, 126, 179);
     border-radius: 10px;
     background-color: while;
-    color: blueviolet;
+    color: rgb(0, 0, 0);
     padding: 5px;
     margin-top: 5px;
 }
 button{
     border:10px;
-    border-color: blue;
-    background-color: blue;
-    color:white;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 5px;
     margin:10px;
+    color: black;
 }
 button:hover{
     background-color: gray;
 }
 #ContactForm{
-    border:3px solid blue;
-    border-radius: 10px;
-    background-color: wheat;
+    border:3px solid rgb(179, 126, 179);
+    border-radius: 25px;
+    background-color: white;
     padding: 10px;
     max-width: 550px;
 }
@@ -49,4 +51,11 @@ button:hover{
     color: brown;
     border-radius: 10px;
     padding: 7px;
+}
+
+.form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
